@@ -1,0 +1,71 @@
+.foto_principal {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-radius: 15px;
+}
+
+.info_basica {
+    /* width: 100%;
+    height: 300px; */
+    background-color: rgba(0, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.datos_padding {
+    padding-left: 15px;
+}
+
+.nombre_apellidos {
+    font-family: 'Mali', cursive;
+    font-weight: bold;
+    /* font-style: italic; */
+}
+
+.titulo {
+    font-family: 'Mali', cursive;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.subtitulo {
+    font-family: 'Mali', cursive;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.centrado {
+    display: flex;
+    align-items: center;
+}
+
+.imgCarrusel {
+    /* max-height: 200px; */
+    height: 210px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.imgCarrusel:hover {
+    cursor: zoom-in;
+}
+
+.bloques {
+    padding-top: 30px;
+}
+
+.modal_descripcion {
+    background-color: rgba(0, 41, 10, 0.6);
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.foto_detalle {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    padding: 10px;
+}

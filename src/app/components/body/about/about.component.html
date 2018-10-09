@@ -1,0 +1,142 @@
+<div class="container animated fadeIn fast">
+
+    <!-- CABECERA -->
+    <div class="row centrado">
+
+        <div class="col-5">
+            <img class="foto_principal" src="./assets/imgs/about/foto_cv.jpg" alt="foto perfil">
+        </div>
+
+        <div class="col-7">
+
+            <h1 class="nombre_apellidos">Juan Antonio Ruiz</h1>
+            <h3 class="subtitulo">Desarrollador junior Angular e Ionic</h3>
+
+            <div class="info_basica ">
+                <ul style="list-style-type:none ">
+                    <li>
+                        <i class="fas fa-phone "></i>
+                        <span class="datos_padding ">633808324</span>
+                    </li>
+
+                    <li>
+                        <i class="far fa-envelope "> </i>
+                        <span class="datos_padding "><a href="mailto:juanantonio.ruizquiros@gmail.com">juanantonio.ruizquiros@gmail.com</a></span>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-map-marker-alt "></i>
+                        <span class="datos_padding ">Jaén</span>
+                    </li>
+
+                    <li>
+                        <i class="fab fa-linkedin "></i>
+                        <span class="datos_padding "><a href="https://www.linkedin.com/in/juan-antonio-ruiz-21584b138/">Linkedin</a></span>
+                    </li>
+                </ul>
+
+                <div class="justificado">
+                    <p>
+                        He sido Ingeniero de producto por tres años, hasta que decidí cambiar al sector que realmente me apasiona, el de la PROGRAMACIÓN, enfocándome al Frontend tanto con ANGULAR como con el framework de IONIC.
+                    </p>
+
+                    <p>
+                        Desde principios de 2018 estoy aprendiendo sobre estas y otras tecnologías, apoyándome en cursos y otros recursos online, gracias a los cuales he podido desarrollar algunos proyectos de cierta complejidad que me han valido para aprender muchísimo y verme
+                        preparado para afrontar el mundo laboral.
+                    </p>
+
+                    <!-- <p>
+                        Aunque no tengo experiencia laboral en este sector, sí que he tratado otros lenguajes como C# (proyecto fin carrera), C++, ... y otros de más bajo nivel orientado a microcontroladores de 8 bits Microchip y Arduino.
+                    </p> -->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- HISTORIA -->
+    <h1 class="titulo">Un poquito sobre mi</h1>
+
+    <!-- BLOQUES -->
+    <div class="row bloques centrado" *ngFor="let experiencia of experiencias; let i = index">
+
+        <!-- Brebe historia (alineado a la derecha) -->
+        <div class="col-8" *ngIf="i%2 == 0">
+            <div *ngFor="let historia of experiencia.historias">
+                <p class="justificado">{{ historia }}</p>
+            </div>
+        </div>
+
+        <!-- Carrusel -->
+        <div class="col-4">
+            <div attr.id="{{'carrusel_' + i}}" class="carousel slide carousel-fade" data-ride="carousel" attr.data-interval="{{i*300 + 5000 + ''}}">
+                <!-- Indicadores de en qué foto se encuentra el carrusel -->
+                <ol class="carousel-indicators">
+                    <li attr.data-target="{{'#carrusel_' + i}}" [attr.data-slide-to]="j" *ngFor="let foto of experiencia.fotos; let j = index"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <!-- Imagenes del carrusel -->
+                    <div class="carousel-item" [ngClass]="{'active': j==0}" *ngFor="let foto of experiencia.fotos; let j = index" data-toggle="modal" attr.data-target="{{'#modal_carrusel_' + i}}" (click)="seleccionarFoto(foto.url, foto.descripcion)">
+                        <img class="d-block w-100 imgCarrusel" src="{{foto.url}}">
+                    </div>
+
+                    <!-- Flechas del carrusel -->
+                    <a class="carousel-control-prev" href="{{'#carrusel_' + i}}" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="{{'#carrusel_' + i}}" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brebe historia (alineado a la izquierda) -->
+        <div class="col-8" *ngIf="i%2 == 1">
+            <div *ngFor="let historia of experiencia.historias">
+                <p style="text-align: justify">{{ historia }}</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bloques justificado">
+        <p>
+            A mi regresao a España, marché a Barcelona a seguir trabajando como Ing. de Producto, pero aprovechando mi desencanto con aquella empresa, empecé a formarme en lo que realmente siempre me había gustado, la programación.
+        </p>
+        <p>
+            Tras algunos meses aprendiendo sobre HTML, CSS, JavaScript, decidí dejar el trabajo y meterme de lleno, continuando con Angular e Ionic. Durante este tiempo he aprendido mucho sobre estas y otras tecnologías, y me encuentro con mucha ilusión de comenzar
+            mi nueva etapa laboral.
+        </p>
+    </div>
+
+</div>
+
+
+<!-- MODAL -->
+<div class="modal fade" attr.id="{{'modal_carrusel_' + i}}" *ngFor="let experiencia of experiencias; let i = index" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- Header con botón de cerrar y descripción de la foto -->
+            <div class="modal-header">
+                <h4>{{fotoSeleccionada.descripcion}}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Imagen -->
+            <div>
+                <img class="foto_detalle " [src]="fotoSeleccionada.url">
+            </div>
+
+        </div>
+    </div>
+</div>

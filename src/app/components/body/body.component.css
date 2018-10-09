@@ -1,0 +1,18 @@
+.background {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ecb2d+0,72aa00+44,8eb92a+46,8eb92a+46,bfd255+99 */
+    background: #9ecb2d;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #9ecb2d 0%, #72aa00 44%, #8eb92a 46%, #8eb92a 46%, #bfd255 99%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #9ecb2d 0%, #72aa00 44%, #8eb92a 46%, #8eb92a 46%, #bfd255 99%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #9ecb2d 0%, #72aa00 44%, #8eb92a 46%, #8eb92a 46%, #bfd255 99%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    min-height: 94vh;
+    /* For 100% screen height */
+}
+
+.padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
