@@ -1,0 +1,21 @@
+<!-- MODAL -->
+<div class="modal fade" id="modal_zoom" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+
+            <!-- Header con botón de cerrar y descripción de la foto -->
+            <div class="modal-header">
+                <h4>{{fotoZoom.titulo}}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Imagen -->
+            <div>
+                <img class="foto_detalle " src="{{fotoZoom.url}}">
+            </div>
+
+        </div>
+    </div>
+</div>

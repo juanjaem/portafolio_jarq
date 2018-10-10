@@ -1,3 +1,38 @@
-<div class="animated fadeIn fast">
-    <h1>Angular</h1>
+<div class="container animated fadeIn fast">
+
+    <div class="centrar espaciado">
+        <img style="border-radius: 20px" src="./assets/imgs/enconstruccion.png">
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">
+                <img class="logo" [src]="IMG_PATH + 'angular-logo.png'"> ANGULAR
+            </h1>
+            <p class="lead">Algunos de los proyectos implementados con Angular</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6 espaciado" *ngFor="let project of projects">
+            <div class="card-deck">
+                <div class="card zoom">
+                    <div class="imgPortada" data-toggle="modal" data-target="#modal_zoom" (click)="seleccionarFoto(project.portada, project.titulo)">
+                        <img class="card-img-top" [src]="IMG_PATH + project.portada">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.titulo }}</h5>
+                        <p class="card-text justificado">{{ project.subtitulo }}</p>
+                        <button type="button" class="btn btn-outline-danger btn-block">Ver más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>
+
+<!-- MODAL -->
+<app-modal-zoom [fotoZoom]="fotoZoom"></app-modal-zoom>

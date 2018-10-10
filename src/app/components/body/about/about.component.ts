@@ -1,27 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { EXPERIENCIAS } from '../../../data/about.data';
-
-declare var $: any;
+import { ModalZoomComponent } from '../../shared/modal-zoom/modal-zoom.component';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
 
-  experiencias = {};
-  fotoSeleccionada = { url: '', descripcion: ''};
+  IMG_PATH = './assets/imgs/about/';
+  experiencias: any[] = [];
+  fotoZoom = { url: '', titulo: ''};
 
   constructor() {
     this.experiencias = EXPERIENCIAS;
-
    }
 
-  seleccionarFoto( url: string, descripcion: string ) {
-    this.fotoSeleccionada.url = url;
-    this.fotoSeleccionada.descripcion = descripcion;
+  ngOnInit() {
+  }
+
+  // Carga la foto a mostrar en el Modal
+  seleccionarFoto( url: string, titulo: string ) {
+    this.fotoZoom.url = this.IMG_PATH + url;
+    this.fotoZoom.titulo = titulo;
   }
 
 }

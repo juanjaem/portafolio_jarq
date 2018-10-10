@@ -7,27 +7,27 @@ export const  EXPERIENCIAS  =  [
 
         fotos: [
             {
-                url: './assets/imgs/about/1-1.jpg',
+                url: '1-1.jpg',
                 descripcion: 'Probando algún circuito de audio allá por 2005'
             },
             {
-                url: './assets/imgs/about/1-2.jpg',
+                url: '1-2.jpg',
                 descripcion: 'Un amplificador y ecualizador en pruebas'
             },
             {
-                url: './assets/imgs/about/1-3.jpg',
+                url: '1-3.jpg',
                 descripcion: 'Al principio dibujaba las pistas de la PCB a mano'
             },
             {
-                url: './assets/imgs/about/1-4.jpg',
+                url: '1-4.jpg',
                 descripcion: 'Dibujo a mano de los componentes'
             },
             {
-                url: './assets/imgs/about/1-5.jpg',
+                url: '1-5.jpg',
                 descripcion: 'Cargador universal de baterias regulable en tension y corriente'
             },
             {
-                url: './assets/imgs/about/1-6.jpg',
+                url: '1-6.jpg',
                 descripcion: 'Uno de los muchos altavoces portatiles que vendí'
             }
         ]
@@ -40,27 +40,27 @@ export const  EXPERIENCIAS  =  [
 
         fotos: [
             {
-                url: './assets/imgs/about/2-1.jpg',
+                url: '2-1.jpg',
                 descripcion: 'Circuito de control para la incubadora'
             },
             {
-                url: './assets/imgs/about/2-2.jpg',
+                url: '2-2.jpg',
                 descripcion: 'La incubadora en pruebas'
             },
             {
-                url: './assets/imgs/about/2-3.jpg',
+                url: '2-3.jpg',
                 descripcion: 'Los primeros pollos naciendo'
             },
             {
-                url: './assets/imgs/about/2-4.jpg',
+                url: '2-4.jpg',
                 descripcion: 'Huevos aún sin los volteadores implementados'
             },
             {
-                url: './assets/imgs/about/2-5.jpg',
+                url: '2-5.jpg',
                 descripcion: 'Poyo naciendo'
             },
             {
-                url: './assets/imgs/about/2-6.jpg',
+                url: '2-6.jpg',
                 descripcion: 'Maqueta del proyecto final carrera'
             }
         ]
@@ -72,19 +72,19 @@ export const  EXPERIENCIAS  =  [
 
         fotos: [
             {
-                url: './assets/imgs/about/3-1.jpg',
+                url: '3-1.jpg',
                 descripcion: 'PCB del control'
             },
             {
-                url: './assets/imgs/about/3-2.jpg',
+                url: '3-2.jpg',
                 descripcion: 'Diseño de la maqueta en 3D'
             },
             {
-                url: './assets/imgs/about/3-3.jpg',
+                url: '3-3.jpg',
                 descripcion: 'Maqueta impresa y con algunos componentes'
             },
             {
-                url: './assets/imgs/about/3-4.jpg',
+                url: '3-4.jpg',
                 descripcion: 'Presentación del proyecto'
             }
         ]
@@ -97,27 +97,27 @@ export const  EXPERIENCIAS  =  [
 
         fotos: [
             {
-                url: './assets/imgs/about/4-1.jpg',
+                url: '4-1.jpg',
                 descripcion: 'Primeros prototipos del piloto del Golf y Variant'
             },
             {
-                url: './assets/imgs/about/4-2.jpg',
+                url: '4-2.jpg',
                 descripcion: 'Con mi Design Leader y uno de los pilotos'
             },
             {
-                url: './assets/imgs/about/4-3.jpg',
+                url: '4-3.jpg',
                 descripcion: 'Piloto visto en Catia'
             },
             {
-                url: './assets/imgs/about/4-4.jpg',
+                url: '4-4.jpg',
                 descripcion: 'Piloto visto en Catia'
             },
             {
-                url: './assets/imgs/about/4-5.jpg',
+                url: '4-5.jpg',
                 descripcion: 'Equipo de diseño'
             },
             {
-                url: './assets/imgs/about/4-6.jpg',
+                url: '4-6.jpg',
                 descripcion: 'Proyector Seat Ibiza, otro de los poyectos que trabajé'
             }
         ]
@@ -130,19 +130,19 @@ export const  EXPERIENCIAS  =  [
 
         fotos: [
             {
-                url: './assets/imgs/about/5-1.jpg',
+                url: '5-1.jpg',
                 descripcion: 'Familia con la que estuve de AuPair'
             },
             {
-                url: './assets/imgs/about/5-2.jpg',
+                url: '5-2.jpg',
                 descripcion: 'JCB'
             },
             {
-                url: './assets/imgs/about/5-3.jpg',
+                url: '5-3.jpg',
                 descripcion: 'Mi compañero y yo en JCB'
             },
             {
-                url: './assets/imgs/about/5-4.jpg',
+                url: '5-4.jpg',
                 descripcion: 'Sección de cilindros hidraulicos de JCB'
             },
         ]

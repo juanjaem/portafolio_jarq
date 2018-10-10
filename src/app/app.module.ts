@@ -10,6 +10,7 @@ import { ROUTES } from './app.routes';
 // Componentes
 import {HeaderComponent, BodyComponent, AboutComponent, FooterComponent,
         PryAngularComponent, PryIonicComponent } from './components/index.components';
+import { ModalZoomComponent } from './components/shared/modal-zoom/modal-zoom.component';
 
 
 
@@ -24,6 +25,7 @@ import {HeaderComponent, BodyComponent, AboutComponent, FooterComponent,
     PryAngularComponent,
     PryIonicComponent,
     AboutComponent,
+    ModalZoomComponent,
   ],
   imports: [
     BrowserModule,

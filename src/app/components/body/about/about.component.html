@@ -3,11 +3,11 @@
     <!-- CABECERA -->
     <div class="row centrado">
 
-        <div class="col-5">
-            <img class="foto_principal" src="./assets/imgs/about/foto_cv.jpg" alt="foto perfil">
+        <div class="col-md-5">
+            <img class="foto_principal" [src]="IMG_PATH + 'foto_cv.jpg'" alt="foto perfil">
         </div>
 
-        <div class="col-7">
+        <div class="col-md-7">
 
             <h1 class="nombre_apellidos">Juan Antonio Ruiz</h1>
             <h3 class="subtitulo">Desarrollador junior Angular e Ionic</h3>
@@ -80,8 +80,8 @@
 
                 <div class="carousel-inner">
                     <!-- Imagenes del carrusel -->
-                    <div class="carousel-item" [ngClass]="{'active': j==0}" *ngFor="let foto of experiencia.fotos; let j = index" data-toggle="modal" attr.data-target="{{'#modal_carrusel_' + i}}" (click)="seleccionarFoto(foto.url, foto.descripcion)">
-                        <img class="d-block w-100 imgCarrusel" src="{{foto.url}}">
+                    <div class="carousel-item" [ngClass]="{'active': j==0}" *ngFor="let foto of experiencia.fotos; let j = index" data-toggle="modal" data-target="#modal_zoom" (click)="seleccionarFoto(foto.url, foto.descripcion)">
+                        <img class="d-block w-100 imgCarrusel" [src]="IMG_PATH + foto.url">
                     </div>
 
                     <!-- Flechas del carrusel -->
@@ -118,25 +118,5 @@
 
 </div>
 
-
 <!-- MODAL -->
-<div class="modal fade" attr.id="{{'modal_carrusel_' + i}}" *ngFor="let experiencia of experiencias; let i = index" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-
-            <!-- Header con botón de cerrar y descripción de la foto -->
-            <div class="modal-header">
-                <h4>{{fotoSeleccionada.descripcion}}</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-            <!-- Imagen -->
-            <div>
-                <img class="foto_detalle " [src]="fotoSeleccionada.url">
-            </div>
-
-        </div>
-    </div>
-</div>
+<app-modal-zoom [fotoZoom]="fotoZoom"></app-modal-zoom>
