@@ -9,10 +9,7 @@ import { ROUTES } from './app.routes';
 
 // Componentes
 import {HeaderComponent, BodyComponent, AboutComponent, FooterComponent,
-        PryAngularComponent, PryIonicComponent } from './components/index.components';
-import { ModalZoomComponent } from './components/shared/modal-zoom/modal-zoom.component';
-
-
+        PryAngularComponent, PryIonicComponent, ModalZoomComponent, DetallePryComponent } from './components/index.components';
 
 
 @NgModule({
@@ -26,10 +23,12 @@ import { ModalZoomComponent } from './components/shared/modal-zoom/modal-zoom.co
     PryIonicComponent,
     AboutComponent,
     ModalZoomComponent,
+    DetallePryComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot( ROUTES, { useHash: true } )
+    // RouterModule.forRoot( ROUTES, { useHash: true } )
+    RouterModule.forRoot( ROUTES )
   ],
   providers: [],
   bootstrap: [AppComponent]

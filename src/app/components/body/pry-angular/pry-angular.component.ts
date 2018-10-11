@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { ANGULAR_PRJS } from 'src/app/data/angular.data';
 import { ModalZoomComponent } from '../../shared/modal-zoom/modal-zoom.component';
@@ -14,7 +15,7 @@ export class PryAngularComponent implements OnInit {
   projects: any[] = [];
   fotoZoom = { url: '', titulo: ''};
 
-  constructor() {
+  constructor( private router: Router ) {
     this.projects = ANGULAR_PRJS;
   }
 
@@ -25,6 +26,10 @@ export class PryAngularComponent implements OnInit {
   seleccionarFoto( url: string, titulo: string ) {
     this.fotoZoom.url = this.IMG_PATH + url;
     this.fotoZoom.titulo = titulo;
+  }
+
+  ir_a_detalle(idx) {
+    this.router.navigate(['/detalle', 'angular', idx]);
   }
 
 }
