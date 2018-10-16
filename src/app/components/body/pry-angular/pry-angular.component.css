@@ -9,13 +9,13 @@
 }
 
 .imgPortada {
-    padding: 5px;
+    padding: 10px;
     cursor: zoom-in;
     /* margin: 5px; */
 }
 
 .card {
-    background-color: rgba(157, 255, 239, 0.5);
+    background-color: rgba(157, 255, 239, 0.3);
 }
 
 .zoom {
@@ -31,13 +31,6 @@
     transform: scale(1.05);
 }
 
-.foto_detalle {
-    width: 100%;
-    height: auto;
-    border-radius: 25px;
-    padding: 10px;
-}
-
 .logo {
     width: 80px;
     height: auto;
@@ -47,4 +40,11 @@
     background-color: rgba(137, 43, 226, 0.3);
     text-align: center;
     border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+}
+
+.lead {
+    margin-bottom: 0px;
 }

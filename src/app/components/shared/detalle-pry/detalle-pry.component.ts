@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { ANGULAR_PRJS } from '../../../data/angular.data';
+import { IONIC_PRJS } from '../../../data/ionic.data';
 
 @Component({
   selector: 'app-detalle-pry',
@@ -28,12 +29,25 @@ export class DetallePryComponent implements OnInit {
         this.proyecto = ANGULAR_PRJS[ params.idx ];
         break;
       case 'ionic':
-        // this.proyecto = IONIC_PRJS[ params.idx ];
+        this.proyecto = IONIC_PRJS[ params.idx ];
         break;
       default:
         break;
     }
+  }
 
+  regresar() {
+    switch ( this.tipo_proyecto ) {
+      case 'angular':
+        this.router.navigate(['/angular']);
+        break;
+      case 'ionic':
+        this.router.navigate(['/ionic']);
+        break;
+      default:
+        this.router.navigate(['/about']);
+        break;
+    }
   }
 
 }

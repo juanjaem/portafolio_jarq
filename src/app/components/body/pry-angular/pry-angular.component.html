@@ -1,20 +1,17 @@
 <div class="container animated fadeIn fast">
 
-    <div class="centrar espaciado">
-        <img style="border-radius: 20px" src="./assets/imgs/enconstruccion.png">
-    </div>
-
+    <!-- Cabecera -->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">
                 <img class="logo" [src]="IMG_PATH + 'angular-logo.png'"> ANGULAR
             </h1>
-            <p class="lead">Algunos de los proyectos implementados con Angular</p>
+            <p class="lead">Algunos proyectos implementados con Angular</p>
         </div>
     </div>
 
+    <!-- Tarjetas -->
     <div class="row">
-
         <div class="col-md-6 espaciado" *ngFor="let project of projects; let idx = index">
             <div class="card-deck">
                 <div class="card zoom">
@@ -22,14 +19,19 @@
                         <img class="card-img-top" [src]="IMG_PATH + project.portada">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">{{ project.titulo }}</h5>
+                        <h5 class="card-title roboto">{{ project.titulo }}</h5>
                         <p class="card-text justificado">{{ project.subtitulo }}</p>
-                        <button type="button" class="btn btn-outline-danger btn-block" (click)="ir_a_detalle(idx)">Ver más</button>
+                        <button type="button" class="btn btn-outline-success btn-block" (click)="ir_a_detalle(idx)">Ver más</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
+    <!-- En construcción -->
+    <hr>
+    <div class="centrar espaciado">
+        <img style="border-radius: 20px" src="./assets/imgs/enconstruccion.png">
     </div>
 
 </div>
